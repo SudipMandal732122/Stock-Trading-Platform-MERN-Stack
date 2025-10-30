@@ -19,7 +19,8 @@ module.exports.Signup = async (req, res, next) => {
         res.cookie("token", token, {
             withCredentials: true,
             httpOnly: true,
-            maxAge: 3 * 24 * 60 * 60 * 1000 ,
+            sameSite:"none",
+            // maxAge: 3 * 24 * 60 * 60 * 1000 ,
 
         });
 
@@ -57,7 +58,8 @@ module.exports.Login = async (req, res, next) => {
         res.cookie("token", token, {
             withCredentials: true,
             httpOnly: true,
-            maxAge: 3 * 24 * 60 * 60 * 1000 ,
+            sameSite:"none",
+            // maxAge: 3 * 24 * 60 * 60 * 1000 ,
 
         });
 
