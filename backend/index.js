@@ -30,7 +30,7 @@ mongoose.connect(dbUrl)
 
 app.use(
   cors({
-    origin: ["http://localhost:3000", "http://localhost:3001"],
+    origin: [process.env.DASHBOARD_URL,process.env.FRONTEND_URL],
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"]
   })

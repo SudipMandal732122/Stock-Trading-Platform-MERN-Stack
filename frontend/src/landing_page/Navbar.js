@@ -34,7 +34,7 @@ function Navbar() {
                 <span
                   className="nav-link hover-blue"
                   style={{ cursor: "pointer" }}
-                  onClick={() => window.location.href = "http://localhost:3001/signup"}
+                  onClick={() => window.location.href = `${process.env.REACT_APP_DASHBOARD_URL}/signup`}
                 >
                   Signup
                 </span>

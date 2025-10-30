@@ -5,9 +5,9 @@ import React from 'react';
 function Hero() {
 
 
-    const handleSignupClick = () => {
-        window.location.href = "http://localhost:3001/signup";
-    };
+  const handleSignupClick = () => {
+   window.location.href = `${process.env.REACT_APP_DASHBOARD_URL}/signup`;
+  };
     return (  
         <div className='container p-5 mb-5'>
             <div className='row text-center'>

@@ -18,7 +18,7 @@ const Home = () => {
   useEffect(() => {
     const verifyUser = async () => {
       try {
-        const { data } = await axios.post("http://localhost:3002/", {});
+        const { data } = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/`, {});
         if (!data.status) {
           removeCookie("token");
           navigate("/login");
@@ -36,9 +36,9 @@ const Home = () => {
   }, [cookies,navigate, removeCookie]);
 
   const logoutHandler = async () => {
-    await axios.post("http://localhost:3002/logout");
+    await axios.post(`${process.env.REACT_APP_BACKEND_URL}/logout`);
     removeCookie("token");
-    window.location.href = "http://localhost:3000/";
+    window.location.href = `${process.env.REACT_APP_FRONTEND_URL}`;
   };
 
   return (

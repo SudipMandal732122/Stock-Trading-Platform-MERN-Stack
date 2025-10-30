@@ -17,8 +17,8 @@ const Signup = () => {
 
   const { email, password, username } = inputValue;
 
-    const handelHome=()=>{
-    window.location.href = "http://localhost:3000/";
+  const handelHome=()=>{
+    window.location.href = `${process.env.REACT_APP_FRONTEND_URL}`;
   }
 
   const handleOnChange = (e) => {
@@ -40,7 +40,7 @@ const Signup = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:3002/signup", // ✅ Backend API
+        `${process.env.REACT_APP_BACKEND_URL}/signup`, // ✅ Backend API
         {...inputValue},
         { withCredentials: true }
       );

@@ -1,12 +1,11 @@
 import React from "react";
 
-import { useNavigate } from "react-router-dom";
 
 function OpenAccount() {
-  const navigate = useNavigate();
+
   
   const handleSignupClick = () => {
-   window.location.href = "http://localhost:3001/signup";
+   window.location.href = `${process.env.REACT_APP_DASHBOARD_URL}/signup`;
   };
   return (
     <div className="container p-5  mt-5">

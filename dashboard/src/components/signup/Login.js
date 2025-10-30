@@ -17,7 +17,7 @@ const Login = () => {
   const { email, password } = inputValue;
 
   const handelHome=()=>{
-    window.location.href = "http://localhost:3000/";
+    window.location.href = `${process.env.REACT_APP_FRONTEND_URL}`;
   }
 
   const handleOnChange = (e) => {
@@ -39,7 +39,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:3002/login",
+       `${process.env.REACT_APP_BACKEND_URL}/login`,
         {...inputValue,},
         { withCredentials: true }
       );

@@ -1,12 +1,12 @@
 import React from 'react';
-import { useNavigate } from "react-router-dom";
+
 
 function Universe() {
-    const navigate = useNavigate();
+
       
-    const handleSignupClick = () => {
-        window.location.href = "http://localhost:3001/signup";
-    };
+  const handleSignupClick = () => {
+    window.location.href = `${process.env.REACT_APP_DASHBOARD_URL}/signup`;
+  };
     return (  
         <div className='container mt-3 p-5'>
             <div className='row text-center'>
