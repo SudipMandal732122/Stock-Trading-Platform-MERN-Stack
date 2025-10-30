@@ -50,7 +50,7 @@ It allows users to **sign up, log in with JWT authentication**, and access a sim
 ---
 
 ## 🧩 Project Structure
-
+```bash
 📦 stock-trading-platform
 ├── 📁 backend
 │ ├── controllers/
@@ -86,7 +86,7 @@ It allows users to **sign up, log in with JWT authentication**, and access a sim
 ├── .gitignore
 └── README.md
 
-
+```
 ---
 
 ## 🔐 Authentication Flow
