@@ -6,7 +6,7 @@ function Hero() {
 
 
   const handleSignupClick = () => {
-   window.location.href = `${process.env.REACT_APP_DASHBOARD_URL}/signup`;
+   window.location.href = `${process.env.REACT_APP_DASHBOARD_URL}`;
   };
     return (  
         <div className='container p-5 mb-5'>

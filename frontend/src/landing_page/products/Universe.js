@@ -5,7 +5,7 @@ function Universe() {
 
       
   const handleSignupClick = () => {
-    window.location.href = `${process.env.REACT_APP_DASHBOARD_URL}/signup`;
+    window.location.href = `${process.env.REACT_APP_DASHBOARD_URL}`;
   };
     return (  
         <div className='container mt-3 p-5'>
